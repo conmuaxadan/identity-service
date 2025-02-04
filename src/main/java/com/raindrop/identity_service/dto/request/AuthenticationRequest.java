@@ -1,6 +1,5 @@
 package com.raindrop.identity_service.dto.request;
 
-import jakarta.validation.constraints.Size;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -9,10 +8,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserRequest {
-    @Size(min = 5, message = "USERNAME_INVALID")
+public class AuthenticationRequest {
     String username;
-    @Size(min = 8, message = "PASSWORD_INVALID")
     String password;
-    String email;
 }
